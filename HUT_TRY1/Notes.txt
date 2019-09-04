@@ -1,0 +1,65 @@
+glutInit: initializes GLUT, must be called before other GL/GLUT functions. It takes the same arguments as the main().
+
+glutCreateWindow: creates a window with the given title.
+
+        int glutCreateWindow(char *title)
+
+glutInitWindowSize: specifies the initial window width and height, in pixels.
+
+        void glutInitWindowSize(int width, int height)
+
+glutInitWindowPosition: positions the top-left corner of the initial window at (x, y). The coordinates (x, y), in term of pixels, is measured in window coordinates, i.e., origin (0, 0) is at the top-left corner of the screen; x-axis pointing right and y-axis pointing down.
+
+    void glutInitWindowPosition(int x, int y)
+
+glutDisplayFunc: registers the callback function (or event handler) for handling window-paint event. The OpenGL graphic system calls back this handler when it receives a window re-paint request. In the example, we register the function display() as the handler.
+
+    void glutDisplayFunc(void (*func)(void))
+
+glutMainLoop: enters the infinite event-processing loop, i.e, put the OpenGL graphics system to wait for events (such as re-paint), and trigger respective event handlers (such as display()).
+
+void glutMainLoop()
+
+
+
+
+Clipping Area: Clipping area refers to the area that can be seen (i.e., captured by the camera), measured in OpenGL coordinates.
+
+The function gluOrtho2D can be used to set the clipping area of 2D orthographic view. Objects outside the clipping area will be clipped away and cannot be seen.
+
+void gluOrtho2D(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top)
+
+
+
+Viewport: Viewport refers to the display area on the window (screen), which is measured in pixels in screen coordinates (excluding the title bar).
+
+The clipping area is mapped to the viewport. We can use glViewport function to configure the viewport.
+
+void glViewport(GLint xTopLeft, GLint yTopLeft, GLsizei width, GLsizei height)
+
+Suppose the the clipping area's (left, right, bottom, top) is (-1.0, 1.0, -1.0, 1.0) (in OpenGL coordinates) and the viewport's (xTopLeft, xTopRight, width, height) is (0, 0, 640, 480) (in screen coordinates in pixels),
+then the bottom-left corner (-1.0, -1.0) maps to (0, 0) in the viewport, the top-right corner (1.0, 1.0) maps to (639, 479). It is obvious that if the aspect ratios for the clipping area and the viewport are not the same, the shapes will be distorted.
+
+
+
+
+
+8.  Handling Mouse Inputs with GLUT
+
+Similarly, we can register callback function to handle mouse-click and mouse-motion.
+
+    glutMouseFunc: registers callback handler for mouse click.
+
+    void glutMouseFunc(void (*func)(int button, int state, int x, int y)
+       // (x, y) is the mouse-click location.
+       // button: GLUT_LEFT_BUTTON, GLUT_RIGHT_BUTTON, GLUT_MIDDLE_BUTTON
+       // state: GLUT_UP, GLUT_DOWN
+
+    glutMotionFunc: registers callback handler for mouse motion (when the mouse is clicked and moved).
+
+    void glutMotionFunc(void (*func)(int x, int y)
+       // where (x, y) is the mouse location in Window's coordinates
+
+
+
+
