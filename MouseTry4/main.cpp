@@ -16,6 +16,23 @@ struct Point {
 
 Point p1, p2;
 
+
+
+void BitmapText(char* string, float xc, float yc)
+{
+char c;
+int i = 0;
+glRasterPos2f(xc, yc);
+
+for (i = 0; string[i] != '\0'; i++)
+{
+c = string[i];
+glutBitmapCharacter(GLUT_BITMAP_8_BY_13, c);
+}
+}
+
+
+
 void draw_dda(Point p1) {
 	GLfloat x1 = p1.x;
 	GLfloat y1 = p2.y;
@@ -45,8 +62,15 @@ void draw_dda(Point p1) {
         }
      glEnd();
 	}
-
+    	glColor3f(1, 0, 0);
+    char name[] = "Abhinav Singh Rana";
+    char sap[] = "500060202";
+    BitmapText(name, 320, 280);
+    BitmapText(sap, 320, 290);
+    glEnd();
 	glFlush();
+
+
 }
 
 void myMouseFunc(int button, int state, int x, int y)

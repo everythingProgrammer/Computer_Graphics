@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1567530156 source:d:\sem5\cg_lab\mousetry4\main.cpp
+1567589884 source:d:\sem5\cg_lab\mousetry4\main.cpp
 	<gl/glut.h>
 	<math.h>
 	<cstdlib>
