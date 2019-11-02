@@ -1,6 +1,6 @@
 // This works for slope   0<m<1
 
-#include <windows.h>
+
 #include <GL/gl.h>
 #include <GL/glut.h>
 #include<stdio.h>
