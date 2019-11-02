@@ -3,7 +3,6 @@
 // Hurray .
 
 
-#include <windows.h>
 #include <GL/gl.h>
 #include <GL/glut.h>
 #include<stdio.h>

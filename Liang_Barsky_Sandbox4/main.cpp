@@ -1,12 +1,11 @@
 #include <GL/gl.h>
-#include <windows.h>
+
 #include <GL/glut.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include <ctime>    // For time()
 #include <cstdlib>  // For srand() and rand()
-#define RAND_MAX = -1000
-#define RAND_MIN = -1000
+
 
 
 int px = 0;
