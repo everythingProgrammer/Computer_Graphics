@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1573186304 source:d:\computer_graphics_assignment\rotations2d\main.cpp
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<math.h>
+
+1426329928 d:\downloads\freeglut-mingw-3.0.0-1.mp\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1426329928 d:\downloads\freeglut-mingw-3.0.0-1.mp\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1573186630 source:d:\final\rotations2d\main.cpp
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<math.h>
+
